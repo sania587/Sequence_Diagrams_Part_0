@@ -1,5 +1,6 @@
-# Full_Stack_Course_Part_0
+# Sequence_Diagrams_Part_0
 
+<br> <b>Part 0.4</b> The diagram is to fetch the input text from the user and display it onto the same page
 ```mermaid
 sequenceDiagram
     participant user
@@ -40,3 +41,7 @@ sequenceDiagram
 
     Note right of browser: The browser executes the callback function that render all the notes to the page
 ```
+<br> <b>Part 0.5</b> The diagram is to fetch the input text from the user and display it onto the same page
+
+
+<br> <b>Part 0.6</b> The diagram is to fetch the input text from the user and display it onto the same page
