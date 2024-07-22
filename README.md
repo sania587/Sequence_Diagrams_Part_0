@@ -2,13 +2,16 @@
 
 ```mermaid
 sequenceDiagram
+    participant user
     participant browser
     participant server
 
+    user->>browser: Save(new_note)
+    activate server
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note 
     activate server
-    server-->>browser: Perform a new HTTP GET request
+    server-->>browser: HTTP status code 302
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
@@ -30,8 +33,10 @@ sequenceDiagram
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    server-->>browser: the file content
     deactivate server
 
-    Note right of browser: The browser executes the callback function that render all the notes
+    browser-->>user: the page
+
+    Note right of browser: The browser executes the callback function that render all the notes to the page
 ```
